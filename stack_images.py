@@ -52,7 +52,9 @@ def stack_images(image_paths,output_path):
     bg.save(output_path,'JPEG')
 
 if __name__ == '__main__':
-    output = 'stacked.png'
-    image_paths = get_image_files(os.getcwd())
-    stack_images(image_paths, output)
+    folder = os.getcwd()
+    image_paths = get_image_files(folder)
+    out_name = 'stacked.jpg'
+    out_path = os.path.join(folder, out_name)
+    stack_images(image_paths, out_path)
 
